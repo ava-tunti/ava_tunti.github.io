@@ -27,17 +27,25 @@
         </div>
     </nav>
 
+    
+
     <div id="home" class="full-height px-lg-5">
         <h1>Ava's Portfolio</h1> <!-- Added heading 1 -->
         <h2>Bio</h2>
         <img src="myself.png" alt="Ava Tuntikanokporn">
-        <p>Hello there everyone! I'm Ava Tuntikanokporn, an aspiring full-stack web developer. Eager to challenge myself and create creative projects, I'm excited to continue building my knowledge in the world of web development. My hope is to contribute meaningfully to the tech community! In my free time, I enjoy swimming, reading, and watching movies. I also love spending time with my new, adorable puppy!
+        <p>Hello there everyone! I'm Ava Tuntikanokporn, an aspiring full-stack web developer. Eager to challenge myself and create creative projects, I'm excited to continue building my knowledge in the world of web development. My goal is to contribute meaningfully to the tech community! In my free time, I enjoy swimming, reading, and watching movies. I also love spending time with my new, adorable puppy!
         </p>
         <div class="d-flex">
             <button class="buttons me-2" onclick="scrollToContact()">Contact Info</button>
-            <a class="buttons" href="projects.html">Projects</a>
+            <button class="buttons me-2" onclick="goToProjects()">Projects</button>
+            <button class="buttons" onclick="goToVideo()">Video Intro</button>
         </div>
         
+    </div>
+    <div id="video" class="full-height px-lg-5">
+        <h2>Video Introduction</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/956EASBpols?si=u1AuR4kkr-lnddBv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="intro"><button class="buttons" onclick="scrollToHome()">About Me</button></div>
     </div>
 
     <div id="contact-section" class="full-height-contact px-lg-5">
@@ -65,6 +73,13 @@
         function scrollToHome() {
         document.documentElement.scrollIntoView({ behavior: 'smooth' });
         }
+
+        function goToProjects() {
+        window.location.href = 'projects.html';
+    }
+    function goToVideo() {
+        document.getElementById('video').scrollIntoView({ behavior: 'smooth' })
+    }
     </script>
 </body>
 </html>
